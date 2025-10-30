@@ -131,9 +131,6 @@
 <loc>http://localhost:4000/about/organigram</loc>
 </url>
 <url>
-<loc>http://localhost:4000/training/hpc-foundations</loc>
-</url>
-<url>
 <loc>http://localhost:4000/resources/preformance-assessment-guidebook</loc>
 </url>
 <url>
@@ -155,13 +152,15 @@
 <loc>http://localhost:4000/training/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/venue/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/about/vision</loc>
 </url>
 <url>
 <loc>http://localhost:4000/about/workinggroups</loc>
 </url>
 <url>
-<loc>http://localhost:4000/assets/pdfs/perf_analysis_workbook_brief.pdf</loc>
-<lastmod>2025-10-30T10:28:12+00:00</lastmod>
+<loc>http://localhost:4000/_pages/facilities/</loc>
 </url>
 </urlset>
