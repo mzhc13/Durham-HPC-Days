@@ -4,7 +4,7 @@ permalink: /
 hidden: true
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/background.png
+  overlay_image: /assets/images/background-hpc-days.png
 
 
 feature_row:
