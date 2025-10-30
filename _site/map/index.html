@@ -1,0 +1,440 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.27.3 by Michael Rose
+  Copyright 2013-2025 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>UK City Map — SHAREing Project - Durham HPC Days</title>
+<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+  <meta name="author" content="First Lastname">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Durham HPC Days">
+<meta property="og:title" content="UK City Map — SHAREing Project">
+<meta property="og:url" content="http://localhost:4000/map/">
+
+
+  <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/map/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Durham HPC Days Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--default" dir="ltr">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Durham HPC Days
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >Register</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/programme/"
+                
+                
+              >Programme</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/training/"
+                
+                
+              >Venue</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/events/"
+                
+                
+              >Social</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/resources/"
+                
+                
+              >Calls and Important Dates</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/network/"
+                
+                
+              >Sponsors and Supporters</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <div id="map" style="height: 640px; border-radius: 10px; overflow: hidden;"></div>
+
+<!-- Leaflet -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+}
+  #map { height: 600px; margin: 1em 40em; border-radius: 12px; }
+  .overlay {
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: none; justify-content: center; align-items: center;
+    z-index: 9999;
+  }
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.overlay.active {
+  display: flex;
+  animation: fadeIn 0.3s ease forwards;
+}
+.info-panel {
+  background: #fff;
+  width: 100%;
+  max-width: 800px;
+  padding: 60px 30px 35px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.overlay.active .info-panel {
+  transform: scale(1);
+  opacity: 1;
+}
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #002A41;
+}
+.member-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  list-style: none;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+}
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  align-items: center;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.member-name {
+  font-weight: 600;
+  color: #222;
+}
+.member-role {
+  font-style: italic;
+  color: #444;
+  font-size: 0.9rem;
+}
+</style>
+
+<div id="overlay" class="overlay" onclick="closePanel(event)">
+  <div id="infoPanel" class="info-panel" onclick="event.stopPropagation()">
+    <button class="close-btn" onclick="closePanel()">×</button>
+    <h2 id="cityTitle">City</h2>
+    <div id="cityContent" class="city-desc">Click a city to learn more.</div>
+  </div>
+</div>
+
+<script>
+const cities = [
+  {
+    name: 'Durham University',
+    lat: 54.7753, lon: -1.5849,
+    info: 'Durham University is a collegiate public research university in Durham, England.',
+    members: [
+      { name: 'Thomas Flynn', role: 'Research Software Engineer<br>', img: '/assets/profilepics/generic.jpg' },
+      { name: 'Tobias Weinzierl', role: 'Professor of Computer Science<br>', img: 'https://tobiasweinzierl.webspace.durham.ac.uk/wp-content/uploads/sites/288/2022/02/2019_tobias.jpg' },
+      { name: 'Alan Real', role: 'Director of Advanced Research Computing', img:'/assets/profilepics/generic.jpg' },
+      { name: 'Eamonn <br> Bell', role: 'Professor of Computer Science', img:'/assets/profilepics/generic.jpg'},
+       { name: 'Alastair Basden', role: 'Director of COSMA <br> ', img:'/assets/profilepics/generic.jpg'},
+       { name: 'Gokmen <br> Kilic', role: 'Research Software Engineer', img:'/assets/profilepics/Gokmen.jpg' },
+      { name: 'Eva Fernandez', role: 'Community Manager <br> ', img: '/assets/profilepics/Fernandez.jpg' }
+    ]
+  },
+    {
+    name: 'Cardiff University',
+    lat: 51.4816, lon: -3.1791,
+    info: 'Cardiff is the capital of Wales.',
+    members: [
+      { name: 'Jon Lockley', role: 'Director of Advanced Research Computing', img: '/assets/profilepics/generic.jpg' },
+      { name: 'Martyn Guest', role: 'Director of Advanced Research Computing', img: '/assets/profilepics/generic.jpg' }
+    ]
+  },
+  {
+    name: 'University of Sheffield',
+    lat: 53.3811, lon: -1.4701,
+    info: 'Sheffield is a city in South Yorkshire.',
+    members: [
+      { name: 'Davide Costanzo', role: 'Head of Particle Physics', img: '/assets/profilepics/generic.jpg' }
+    ]
+  },
+  {
+    name: 'Queen Mary University of London',
+    lat: 51.5074, lon: -0.1278,
+    info: 'Queen Mary University of London (QMUL) is an established university in London’s vibrant East End.',
+    members: [
+      { name: 'Biagio Lucini', role: 'Professor of Mathematics and Head of School', img: '/assets/profilepics/Lucini.jpg' },
+      { name: 'Jon Hays', role: 'Head of Particle Physics Research Centre', img: '/assets/profilepics/generic.jpg' }
+    ]
+  },
+  {
+    name: 'The University of Manchester',
+    lat: 53.4808, lon: -2.2426,
+    info: 'The University of Manchester is a public research university located in Manchester, UK and its roots trace back to 1824.',
+    members: [
+      { name: 'Georgios Fourtakas', role: 'Associate Professor, School of Engineering', img:'/assets/profilepics/GFourtakas.jpg' }
+    ]
+  },
+  {
+    name: 'Swansea University',
+    lat: 51.6214, lon: -3.9436,
+    info: 'Swansea University is a research-intensive university in Swansea, Wales, founded by royal charter in 1920 as a constituent college of the University of Wales, and becoming independent in 2007.',
+    members: [
+      { name: 'Ed Bennett', role: 'Senior Research Software Engineer', img:'/assets/profilepics/Bennett.jpg' }
+    ]
+  },
+  {
+    name: 'CoSeC',
+    lat: 53.3406, lon: -2.8494,
+    info: 'The Computational Science Centre for Research Communities (CoSeC)',
+    members: [
+      { name: 'Damian Jones', role: 'Programme Manager', img:'/assets/profilepics/DamianJones.jpg' },
+      { name: 'Stephen Longshaw', role: 'Director of the Computational Science Centre for Research Communities', img:'/assets/profilepics/Longshaw.jpg' }
+    ]
+  }
+];
+
+
+const map = L.map('map').setView([54, -2], 6);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+const normalStyle = { radius: 8, color: '#002A41', fillColor: '#002A41', weight: 1, fillOpacity: 0.85 };
+const hoverStyle = { radius: 14, color: '#B906B9', fillColor: '#B906B9', weight: 2, fillOpacity: 1 };
+
+const overlay = document.getElementById('overlay');
+const cityTitle = document.getElementById('cityTitle');
+const cityContent = document.getElementById('cityContent');
+
+function openPanel(city) {
+  cityTitle.textContent = city.name;
+  cityContent.innerHTML = `
+    <p>${city.info}</p>
+    <h3>Team Members</h3>
+    <ul class="member-list">
+      ${city.members.map(m => `
+        <li class="member">
+          <img src="${m.img}" alt="${m.name}">
+          <div class="member-name">${m.name}</div>
+          <div class="member-role"><em>${m.role}</em></div>
+        </li>
+      `).join('')}
+    </ul>
+  `;
+  overlay.classList.add('active');
+}
+
+function closePanel(event) {
+  if (event && event.target !== overlay && !event.target.classList.contains('close-btn'))
+    return;
+  overlay.classList.remove('active');
+}
+
+cities.forEach(city => {
+  const marker = L.circleMarker([city.lat, city.lon], normalStyle).addTo(map);
+  marker.bindTooltip(city.name, { direction: 'top', offset: [0, -8] });
+  marker.on('mouseover', () => marker.setStyle(hoverStyle));
+  marker.on('mouseout', () => marker.setStyle(normalStyle));
+  marker.on('click', () => openPanel(city));
+});
+</script>
+
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://bsky.app/profile/tobiasweinzierl.bsky.social" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+          <li><a href="https://github.com/mzhc13/Durham-HPC-Days.git" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2025 <a href="http://localhost:4000">Durham HPC Days</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>
