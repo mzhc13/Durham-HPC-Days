@@ -62,6 +62,8 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-archives
+  - jekyll-sitemap
 
 author:
   name   : "First Lastname"
@@ -144,3 +146,4 @@ collections:
 #  - jekyll-feed
 #  - jemoji
 #  - jekyll-include-cache
+
