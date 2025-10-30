@@ -512,6 +512,30 @@ font-size: 0.6rem;
    text-align: center;
 }
 
+.session-card.coffee {
+  background-color: #F8FAFC; 
+  border-left: 4px solid #F8FAFC;
+  border-color: #F8FAFC;
+}
+
+
+.session-card.coffee .time-label {
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: #ffffff;
+  background: #ffffff;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.programme-time:has(.session-card.coffee) .time-label {
+  background: #F8FAFC; 
+  color: #002A41;      
+}
+
+
 
 /*SOCIAL SESSIONS*/
 .session-card.social h3 {
@@ -544,6 +568,7 @@ font-size: 0.6rem;
   border-left: 4px solid #F8FAFC;
   border-color: #F8FAFC;
 }
+
 
 
 /* Para sesiones divididas (parte 1/2) */
