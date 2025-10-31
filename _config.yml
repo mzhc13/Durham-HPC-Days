@@ -21,6 +21,12 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 twitter_username: tobiasweinzierl.bsky.social‬
 github_username: tobiasweinzierl80
+
+# Add these two lines ↓↓↓
+url: "https://mzhc13.github.io"
+baseurl: "/Durham-HPC-Days"
+
+
 minimal_mistakes_skin: air
 search: true
 
