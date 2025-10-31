@@ -21,13 +21,16 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
   
   url: "https://mzhc13.github.io"
-baseurl: ""
+baseurl: "/Durham-HPC-Days"
+
 twitter_username: tobiasweinzierl.bsky.social‬
 github_username: tobiasweinzierl80
 
 
-
 minimal_mistakes_skin: air
+
+assets_path: "{{ '/assets/images/' | relative_url }}"
+
 search: true
 
 # Liquid

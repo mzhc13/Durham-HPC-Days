@@ -5,7 +5,7 @@ hidden: true
 
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/background-hpc-days.png
+  overlay_image:  "{{ site.assets_path }}background-hpc-days.png"
 ---
 
 <style>
@@ -180,10 +180,10 @@ section p {
 
 <!-- === HERO VIDEO SECTION CON PARALLAX === -->
 <div class="hero">
-  <video autoplay muted loop playsinline>
-    <source src="/assets/images/video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+<video autoplay muted loop playsinline>
+  <source src="{{ site.assets_path }}video.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
   <div class="hero-content">
     <h1>Durham HPC Days 2025 Video Recap</h1>
     <p>Take a look back at Durham HPC Days 2025 in this short recap featuring our keynote speakers</p>
@@ -202,8 +202,8 @@ section p {
 <section id="gallery" class="fade-in">
   <h2>📸 Gallery</h2>
   <div class="image-grid">
-  <img src="/assets/images/river-durham.jpeg">
-   <img src="/assets/images/cathedral-river-durham.jpeg"> 
+   <img src="{{ site.assets_path }}cathedral-river-durham.jpeg">
+   <img src="{{ site.assets_path }}river-durham.jpeg">
 
 </section>
 
