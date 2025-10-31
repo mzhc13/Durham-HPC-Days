@@ -5,7 +5,7 @@ hidden: true
 
 header:
   overlay_color: "#5e616c"
-  overlay_image: "{{ site.baseurl }}/assets/images/background-hpc-days.png"
+  overlay_image: /assets/images/background-hpc-days.png
 ---
 
 <style>

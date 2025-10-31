@@ -22,8 +22,6 @@ description: >- # this means to ignore newlines until "baseurl:"
 twitter_username: tobiasweinzierl.bsky.social‬
 github_username: tobiasweinzierl80
 
-# Add these two lines ↓↓↓
-url: "https://mzhc13.github.io"
 
 
 minimal_mistakes_skin: air
@@ -78,7 +76,7 @@ author:
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://github.com/mzhc13/Durham-HPC-Days.git"
+      url: "https://mzhc13.github.io/"
     - label: "Bluesky"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/"
@@ -97,6 +95,7 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/mzhc13/Durham-HPC-Days.git"
+    
 
 defaults:
   # _posts
