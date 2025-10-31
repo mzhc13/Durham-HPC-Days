@@ -202,8 +202,8 @@ section p {
 <section id="gallery" class="fade-in">
   <h2>📸 Gallery</h2>
   <div class="image-grid">
-    <img src="{{ '/assets/images/cathedral-river-durham.jpeg' | relative_url }}" alt="Computer Science Building">
-    <img src="{{ '/assets/images/cathedral-river-durham.jpeg' | relative_url }}" alt="Computer Science Building">
+  <img src="/assets/images/river-durham.jpeg">
+   <img src="/assets/images/cathedral-river-durham.jpeg"> 
 
 </section>
 
