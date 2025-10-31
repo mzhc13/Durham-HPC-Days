@@ -202,7 +202,7 @@ section p {
 <section id="gallery" class="fade-in">
   <h2>📸 Gallery</h2>
   <div class="image-grid">
-    <img src="/assets/images/river-durham.jpeg" alt="River in Durham">
+    <img src="Durham-HPC-Days/assets/images/cathedral-river-durham.jpeg" alt="River in Durham">
     <img src="/assets/images/cathedral-river-durham.jpeg" alt="Computer Science Building">
       </div>
 </section>
