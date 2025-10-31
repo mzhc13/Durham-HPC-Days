@@ -59,28 +59,28 @@ var store = [{
         "url": "/programme/monday-social/",
         "teaser": null
       },{
-        "title": "Workshop 1 – Part 1",
-        "excerpt":"Abstract  A look at emerging trends in high-performance computing…   Bio  Prof. Jane Smith is a leading researcher at the University of Durham.   ","categories": ["Workshop"],
+        "title": "Tutorial",
+        "excerpt":"Abstract  A look at emerging trends in high-performance computing…   Bio  Prof. Jane Smith is a leading researcher at the University of Durham.   ","categories": ["Tutorial"],
         "tags": [],
-        "url": "/programme/monday-workshop-9am-1-part1/",
+        "url": "/programme/monday-tutorial-11am/",
         "teaser": null
       },{
-        "title": "Workshop 1 – Part 2",
-        "excerpt":"Abstract  A look at emerging trends in high-performance computing…   Bio  Prof. Jane Smith is a leading researcher at the University of Durham.   ","categories": ["Workshop"],
+        "title": "Tutorial",
+        "excerpt":"Abstract  A look at emerging trends in high-performance computing…   Bio  Prof. Jane Smith is a leading researcher at the University of Durham.   ","categories": ["Tutorial"],
         "tags": [],
-        "url": "/programme/monday-workshop-9am-1-part2/",
+        "url": "/programme/monday-tutorial-13-30pm/",
         "teaser": null
       },{
-        "title": "Workshop 2 – Part 1",
-        "excerpt":"Abstract  A look at emerging trends in high-performance computing…   Bio  Prof. Jane Smith is a leading researcher at the University of Durham.   ","categories": ["Workshop"],
+        "title": "Tutorial",
+        "excerpt":"Abstract  A look at emerging trends in high-performance computing…   Bio  Prof. Jane Smith is a leading researcher at the University of Durham.   ","categories": ["Tutorial"],
         "tags": [],
-        "url": "/programme/monday-workshop-9am-2-part1/",
+        "url": "/programme/monday-tutorial-15-30pm/",
         "teaser": null
       },{
-        "title": "Workshop 2 – Part 2",
-        "excerpt":"Abstract  A look at emerging trends in high-performance computing…   Bio  Prof. Jane Smith is a leading researcher at the University of Durham.   ","categories": ["Workshop"],
+        "title": "Tutorial",
+        "excerpt":"Abstract  A look at emerging trends in high-performance computing…   Bio  Prof. Jane Smith is a leading researcher at the University of Durham.   ","categories": ["Tutorial"],
         "tags": [],
-        "url": "/programme/monday-workshop-9am-2-part2/",
+        "url": "/programme/monday-tutorial-9am/",
         "teaser": null
       },{
         "title": "Thursday Keynote",

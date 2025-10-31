@@ -547,6 +547,18 @@ font-size: 0.6rem;
 }
 
 
+
+
+
+/*TUTORIAL SESSIONS*/
+.session-card.tutorial h3 {
+  font-size: 1rem;
+  color: #002A41;
+  margin-bottom: 0rem;
+   margin-top: 0.1rem;
+   text-align: left;
+}
+
 .session-card.tutorial {
   background-color: #E3F2FD;
   border-left: 4px solid #2196F3;

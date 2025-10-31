@@ -4,25 +4,15 @@ title: "Conference Programme"
 permalink: /venue/
 classes: [full-programme]
 ---
-  
-   
-     
-       
-
-
-
-
-# Accessibility & Facilities
-
-Welcome to the **MSCS Building Information** page.  
-Here you’ll find details on accessibility, facilities, and connectivity across the Computer Science building.
-
----
+   <br>
+   <br>
+# Facilities
+Durham HPC Days takes place in the **Mathematical Sciences and Computer Science Building** page.  
 
 ## 🧭 Accessibility
 
-Accessibility information for the MSCS building is available  
-[here](# "Link to full accessibility guide").
+
+Please [visit this page](https://www.accessable.co.uk/durham-university/mountjoy/access-guides/mathematical-sciences-and-computer-science-building) to find further details on accessibility, facilities, and connectivity across the Computer Science building.
 
 ---
 
@@ -67,10 +57,6 @@ For **Durham staff and students**, and visitors from other educational instituti
 
 For **guests without Eduroam access**, CIS recommends connecting to Durham’s guest network **TheCloud@Durham**.
 
-More information is available [here](# "Link to IT support or CIS documentation").
+More information is available [here](https://www.durham.ac.uk/about-us/professional-services/computing-information-services/support/wireless-service/).
 
----
 
-<div style="text-align:center; font-size:0.9em; color:#555; margin-top:3em;">
-  © 2025 Durham University · Department of Computer Science  
-</div>

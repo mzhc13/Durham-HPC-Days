@@ -1,12 +1,12 @@
 main:
   - title: "Register"
-    url: /about/
+    url: /register/
   - title: "Programme"
     url: /programme/
   - title: "Venue"
     url: /venue/
   - title: "Social"
-    url: /events/
+    url: /social/
   - title: "Calls and Important Dates"
     url: /resources/
   - title: "Sponsors and Supporters"
