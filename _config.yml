@@ -23,7 +23,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   
  url: "https://mzhc13.github.io"
 baseurl: "/Durham-HPC-Days"
-assets_path: "/assets/images/"
+
+
 twitter_username: tobiasweinzierl.bsky.social‬
 github_username: tobiasweinzierl80
 
