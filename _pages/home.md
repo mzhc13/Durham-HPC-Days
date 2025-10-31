@@ -4,6 +4,7 @@ permalink: /
 hidden: true
 header:
   overlay_color: "#5e616c"
+  overlay_image: "{{ '/assets/images/background-hpc-days.png' | relative_url }}"
 ---
 
 <style>
@@ -200,8 +201,8 @@ section p {
 <section id="gallery" class="fade-in">
   <h2>📸 Gallery</h2>
   <div class="image-grid">
-   <img src="{{ site.assets_path }}cathedral-river-durham.jpeg">
-   <img src="{{ '/assets/images/cathedral-river-durham.jpeg' | relative_url }}" alt="Computer Science Building">
+      <img src="{{ '/assets/images/cathedral-river-durham.jpeg' | relative_url }}" alt="Computer Science Building">
+      <img src="{{ '/assets/images/river-durham.jpeg' | relative_url }}" alt="Computer Science Building">
 
 </section>
 
