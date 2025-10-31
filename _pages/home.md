@@ -2,10 +2,9 @@
 layout: splash
 permalink: /
 hidden: true
-
 header:
   overlay_color: "#5e616c"
-  overlay_image:  "{{ site.assets_path }}background-hpc-days.png"
+  overlay_image: "{{ site.assets_path | relative_url }}background-hpc-days.png"
 ---
 
 <style>

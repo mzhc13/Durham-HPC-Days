@@ -20,16 +20,15 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
   
-  url: "https://mzhc13.github.io"
+  
+ url: "https://mzhc13.github.io"
 baseurl: "/Durham-HPC-Days"
-
+assets_path: "/assets/images/"
 twitter_username: tobiasweinzierl.bsky.social‬
 github_username: tobiasweinzierl80
 
 
 minimal_mistakes_skin: air
-
-assets_path: "{{ '/assets/images/' | relative_url }}"
 
 search: true
 
