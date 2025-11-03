@@ -16,7 +16,7 @@ Please [visit this page](https://www.accessable.co.uk/durham-university/mountjoy
 
 ---
 
-## 🚻 Toilets and Showers
+## 🚾 Toilets and Showers
 
 ### Changing Places
 A **Changing Places** toilet is available on **Level 1**, to the left as you enter via the main entrance.

@@ -3,17 +3,16 @@ layout: splash
 permalink: /
 hidden: true
 header:
-  overlay_color: "#5e616c"
   overlay_image: "/Durham-HPC-Days/assets/images/background-hpc-days.png"
 
 ---
 
 <style>
+
 /* === GENERAL === */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #f9f9f9;
   color: #222;
   scroll-behavior: smooth;
 }
@@ -36,24 +35,28 @@ a:hover {
 /* === HERO VIDEO SECTION WITH PARALLAX === */
 .hero {
   position: relative;
-  width: 100%;
-  height: 600px; /* altura de la franja parallax */
+  width: 100vw;            /* ocupa todo el ancho del viewport */
+  left: 50%;               /* centra el elemento */
+  right: 50%;
+  margin-left: -50vw;      /* lo re-centra respecto al layout */
+  margin-right: -50vw;
+  height: 600px;  
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
+  color: #f9f9f9;
 }
 
 .hero video {
-  position: absolute; /* video fijo para parallax */
+  position: absolute; 
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1; /* detrás de todo el contenido */
+  z-index: -1; 
 }
 
 .hero::before {
@@ -61,7 +64,7 @@ a:hover {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.5); /* overlay para contraste */
+  background: rgba(0,0,0,0.5); 
   z-index: 0;
 }
 
@@ -82,7 +85,7 @@ a:hover {
 }
 
 .btn {
-  background: #0055aa;
+  background: #002A41;
   color: white;
   padding: 0.9rem 2rem;
   border-radius: 30px;
@@ -95,7 +98,6 @@ a:hover {
   background: #003d80;
   transform: translateY(-3px);
 }
-
 /* === SECTION STYLING === */
 section {
   max-width: 900px;
@@ -112,7 +114,13 @@ section h2 {
 section p {
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #444;
+  color: #ffff;
+}
+
+section t {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #002A41;
 }
 
 /* === IMAGE GRID === */
@@ -160,7 +168,33 @@ section p {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
+  
+  
 }
+
+.call-for-submissions {
+  background: #002A41;
+  color: white;
+  padding: 1rem 1rem;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 1rem auto;
+  margin top: 1rem auto;
+  text-align: center;
+}
+
+.call-for-submissions .deadline-box {
+  font-size: 1.1rem;
+  background: white;
+  color: #002A41;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  font-weight: 500;
+  margin-top: 1.5rem;
+}
+
+
 </style>
 
 
@@ -168,10 +202,26 @@ section p {
 <!-- === ABOUT SECTION === -->
 <section id="about" class="fade-in">
   <h2>💡 About the Event</h2>
-  <p>
+  <t>
     The <strong>Durham HPC Days</strong> bring together researchers, developers, and practitioners 
-    to explore the frontiers of high-performance computing, data analysis, and scientific innovation.
+    to explore the frontiers of high-performance computing, data analysis, and scientific innovation. <br>
+  </t>
+</section>
+
+<section class="call-for-submissions fade-in">
+  <h2>📢 Call for Submissions</h2>
+  <p>
+    We invite submissions for talks, workshops, and poster sessions at the
+    <strong>Durham HPC Days 2026</strong>.  
+    This is an opportunity to share your work, inspire others, and shape the future of high-performance computing research.
   </p>
+  <div class="deadline-box">
+    🗓️ Submission Deadline: <strong>March 14, 2026</strong>
+  </div>
+  <br><br>
+  <a href="/Durham-HPC-Days/submissions" class="btn" style="background: #0055aa;">
+    Submit Your Abstract
+  </a>
 </section>
 
 
@@ -187,35 +237,38 @@ section p {
   <div class="hero-content">
     <h1>Durham HPC Days 2025 Video Recap</h1>
     <p>Take a look back at Durham HPC Days 2025 in this short recap featuring our keynote speakers</p>
-    <a href="/programme/" class="btn">View Programme</a>
+    <p href="https://youtu.be/wPjtwACmaUg?si=E7VOWWcH5pda8ZSr" class="btn">View Video</p>
+    <p href="https://durham.readthedocs.io/en/latest/hpcdays2025/index.html" class="btn">Visit last year's website</p>
   </div>
 </div>
 
 
 
-<div class="footer-note">
-  © 2025 Durham University · Durham HPC Days
-</div>
 
 
 <!-- === GALLERY SECTION === -->
 <section id="gallery" class="fade-in">
   <h2>📸 Gallery</h2>
   <div class="image-grid">
-<img src="/Durham-HPC-Days/assets/images/cathedral-river-durham.jpeg" alt="Computer Science Building">
-<img src="/Durham-HPC-Days/assets/images/river-durham.jpeg" alt="River Durham">
-
+<img src="/Durham-HPC-Days/assets/images/Sessions.jpg" alt="Sessions">
+<img src="/Durham-HPC-Days/assets/images/food-truck.jpg" alt="Food truck">
+<img src="/Durham-HPC-Days/assets/images/social.png" alt="social">
+<img src="/Durham-HPC-Days/assets/images/stickers.jpg" alt="stickers">
+</div>
 </section>
 
-<!-- === CONTACT SECTION === -->
-<section id="contact" class="fade-in">
-  <h2>📬 Get in Touch</h2>
-  <p>
-    For questions or collaboration opportunities, contact us at  
-    <a href="mailto:organisers@durham.ac.uk">organisers@durham.ac.uk</a>.
+
+
+
+<!-- === PROGRAMME SECTION === -->
+<section id="programme" class="fade-in">
+  <h2>🗓️ Explore the Programme</h2>
+  <p style="max-width: 700px; margin: 0 auto 2rem;">
+    Discover the full schedule of keynotes, technical sessions, and social events for the upcoming conference.  
+    Check the programme to plan your participation and make the most of your experience at Durham HPC Days.
   </p>
+  <a href="/Durham-HPC-Days/programme" class="btn">View Full Programme</a>
 </section>
-
 
 
 

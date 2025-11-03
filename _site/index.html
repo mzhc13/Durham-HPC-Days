@@ -10,7 +10,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>SHAREing project site - Durham HPC Days</title>
+<!-- begin _includes/seo.html --><title>Durham HPC Days</title>
 <meta name="description" content="Durham HPC Days website">
 
 
@@ -21,14 +21,15 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Durham HPC Days">
-<meta property="og:title" content="SHAREing project site">
-<meta property="og:url" content="http://localhost:4000/Durham-HPC-Days/">
+<meta property="og:title" content="Durham HPC Days">
+<meta property="og:url" content="http://localhost:4000/">
 
 
   <meta property="og:description" content="Durham HPC Days website">
 
 
 
+  <meta property="og:image" content="http://localhost:4000/Durham-HPC-Days/assets/images/background-hpc-days.png">
 
 
 
@@ -38,7 +39,8 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/Durham-HPC-Days/">
+
+<link rel="canonical" href="http://localhost:4000/">
 
 
 
@@ -49,7 +51,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
     "name": null,
-    "url": "http://localhost:4000/Durham-HPC-Days/"
+    "url": "http://localhost:4000/"
 }
 </script>
 
@@ -65,7 +67,7 @@
 
 
 
-  <link href="/Durham-HPC-Days/feed.xml" type="application/atom+xml" rel="alternate" title="Durham HPC Days Feed">
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Durham HPC Days Feed">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <script>
@@ -74,7 +76,7 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="/Durham-HPC-Days/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/main.css">
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
 
@@ -88,7 +90,7 @@
 
   </head>
 
-  <body class="layout--home" dir="ltr">
+  <body class="layout--splash" dir="ltr">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -104,43 +106,43 @@
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         
-        <a class="site-title" href="/Durham-HPC-Days/">
+        <a class="site-title" href="/">
           Durham HPC Days
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
               <a
-                href="/Durham-HPC-Days/register/"
+                href="/register/"
                 
                 
               >Register</a>
             </li><li class="masthead__menu-item">
               <a
-                href="/Durham-HPC-Days/programme/"
+                href="/programme/"
                 
                 
               >Programme</a>
             </li><li class="masthead__menu-item">
               <a
-                href="/Durham-HPC-Days/venue/"
+                href="/venue/"
                 
                 
               >Venue</a>
             </li><li class="masthead__menu-item">
               <a
-                href="/Durham-HPC-Days/social/"
+                href="/social/"
                 
                 
               >Social</a>
             </li><li class="masthead__menu-item">
               <a
-                href="/Durham-HPC-Days/resources/"
+                href="/resources/"
                 
                 
               >Calls and Important Dates</a>
             </li><li class="masthead__menu-item">
               <a
-                href="/Durham-HPC-Days/network/"
+                href="/network/"
                 
                 
               >Sponsors and Supporters</a>
@@ -164,176 +166,289 @@
 
     <div class="initial-content">
       
-
-
-
-<div id="main" role="main">
   
-
-
-  <div class="archive">
-    
-      <h1 id="page-title" class="page__title">SHAREing project site</h1>
-    
-    <h1 id="shareing-project-site">SHAREing project site</h1>
-
-<p>The SHAREing project site is a static site, generated from Markdown source by Jekyll (an application in Ruby) and hosted on GitHub Pages. It is available at https://SHAREing-DRI.github.io.</p>
-
-<h2 id="table-of-contents">Table of Contents</h2>
-
-<ul>
-  <li><a href="#shareing-project-site">SHAREing project site</a>
-    <ul>
-      <li><a href="#table-of-contents">Table of Contents</a></li>
-      <li><a href="#getting-started">Getting Started</a>
-        <ul>
-          <li><a href="#prerequisites">Prerequisites</a></li>
-          <li><a href="#build">Build</a></li>
-          <li><a href="#running-locally">Running Locally</a></li>
-        </ul>
-      </li>
-      <li><a href="#ruby--bundler-notes">Ruby \&amp; Bundler Notes</a>
-        <ul>
-          <li><a href="#why-bundler">Why Bundler?</a></li>
-          <li><a href="#installing-ruby-with-rvm">Installing Ruby with RVM</a></li>
-        </ul>
-      </li>
-      <li><a href="#contributing">Contributing</a></li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="getting-started">Getting Started</h2>
-
-<h3 id="prerequisites">Prerequisites</h3>
-
-<p>The following instructions assume a *nix-type environment.</p>
-
-<p>To build and run the site locally, you need:</p>
-
-<ul>
-  <li>Git</li>
-  <li>Ruby</li>
-  <li>Bundler</li>
-  <li>Jekyll</li>
-</ul>
-
-<blockquote>
-  <p>Note: Ruby is not always up-to-date on macOS or Linux distributions. See Ruby &amp; Bundler Notes for help installing the latest version.</p>
-</blockquote>
-
-<h3 id="build">Build</h3>
-
-<p>To build the site locally (e.g. for testing your changes prior to contributing) please follow the instructions below. For more details, see the GitHub Pages documentation:<br />
-https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll</p>
-
-<ol>
-  <li>
-    <p>Clone the repository:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/SHAREing-DRI/SHAREing-DRI.github.io
-<span class="nb">cd </span>SHAREing-DRI.github.io
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>Install Ruby dependencies:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span>
-</code></pre></div>    </div>
-  </li>
-</ol>
-
-<p>If you do not have Ruby (and likely therefore Bundler) installed, please see <a href="#ruby--bundler-notes">Ruby \&amp; Bundler Notes</a> below.</p>
-
-<h3 id="running-locally">Running Locally</h3>
-<p>To serve the site locally:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
-</code></pre></div></div>
-
-<p>Then open your browser and go to <code class="language-plaintext highlighter-rouge">http://localhost:4000</code>.</p>
-
-<hr />
-
-<h2 id="ruby--bundler-notes">Ruby &amp; Bundler Notes</h2>
-
-<h3 id="why-bundler">Why Bundler?</h3>
-
-<p>Bundler manages Ruby “gem” dependencies, ensuring consistent environments across machines.</p>
-
-<h3 id="installing-ruby-with-rvm">Installing Ruby with RVM</h3>
-
-<p>If your system Ruby is outdated (as it is likely to be) you can install the latest version, with the help of Ruby Version Manager (RVM). RVM is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments from interpreters to sets of gems. Here it is used to manage interpreters.</p>
-
-<p>One way to install RVM is as follows; other methods are described <a href="https://rvm.io/">on the RVM website</a>.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="se">\c</span>url <span class="nt">-sSL</span> https://get.rvm.io | bash <span class="nt">-s</span> stable
-<span class="nb">source</span> ~/.rvm/scripts/rvm
-rvm <span class="nb">install </span>ruby
-rvm use ruby <span class="nt">--default</span>
-</code></pre></div></div>
-
-<p>Then install Bundler:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>bundler
-</code></pre></div></div>
-
-<hr />
-
-<h2 id="contributing">Contributing</h2>
-
-<p>We welcome contributions! Here’s one way to get started.</p>
-
-<ol>
-  <li>Fork the repository on GitHub.</li>
-  <li>
-    <p>Clone your fork locally:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/your-username/your-fork.git
-<span class="nb">cd </span>your-fork
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>Create a new branch for your changes:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout <span class="nt">-b</span> feature/your-feature-name
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>Make your changes and commit them:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nb">.</span>
-git commit <span class="nt">-m</span> <span class="s2">"Add your message here"</span>
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>Push to your fork:</p>
-
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push origin feature/your-feature-name
-</code></pre></div>    </div>
-  </li>
-  <li>Through the GitHub web UI, open a Pull Request against the <code class="language-plaintext highlighter-rouge">main</code> branch of the original repository.</li>
-</ol>
-
-
-
-<h3 class="archive__subtitle">Recent Posts</h3>
-
-
-
-
-<div class="entries-list">
-  
-
-
-
-
+<div class="page__hero" style="background-image: url('/Durham-HPC-Days/assets/images/background-hpc-days.png'); background-size: cover; background-position: center; height: 600px;">
 </div>
 
 
 
 
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    
+    
+    
+
+    <section class="page__content" itemprop="text">
+      <style>
+
+/* === GENERAL === */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+a {
+  color: #0055aa;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* === HERO VIDEO SECTION WITH PARALLAX === */
+.hero {
+  position: relative;
+  width: 100vw;            /* ocupa todo el ancho del viewport */
+  left: 50%;               /* centra el elemento */
+  right: 50%;
+  margin-left: -50vw;      /* lo re-centra respecto al layout */
+  margin-right: -50vw;
+  height: 600px;  
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #f9f9f9;
+}
+
+.hero video {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5); 
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 2s ease-out;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: #002A41;
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #003d80;
+  transform: translateY(-3px);
+}
+/* === SECTION STYLING === */
+section {
+  max-width: 900px;
+  margin: 5rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ffff;
+}
+
+section t {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #002A41;
+}
+
+/* === IMAGE GRID === */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* === FADE-IN EFFECT === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === FOOTER NOTE === */
+.footer-note {
+  text-align: center;
+  padding: 2rem 0;
+  background: #003366;
+  color: white;
+  font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+  
+  
+}
+
+.call-for-submissions {
+  background: #002A41;
+  color: white;
+  padding: 1rem 1rem;
+  border-radius: 20px;
+  max-width: 900px;
+  margin: 1rem auto;
+  margin top: 1rem auto;
+  text-align: center;
+}
+
+.call-for-submissions .deadline-box {
+  font-size: 1.1rem;
+  background: white;
+  color: #002A41;
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  font-weight: 500;
+  margin-top: 1.5rem;
+}
+
+
+</style>
+
+<!-- === ABOUT SECTION === -->
+<section id="about" class="fade-in">
+  <h2>💡 About the Event</h2>
+  <t>
+    The <strong>Durham HPC Days</strong> bring together researchers, developers, and practitioners 
+    to explore the frontiers of high-performance computing, data analysis, and scientific innovation. <br />
+  </t>
+</section>
+
+<section class="call-for-submissions fade-in">
+  <h2>📢 Call for Submissions</h2>
+  <p>
+    We invite submissions for talks, workshops, and poster sessions at the
+    <strong>Durham HPC Days 2026</strong>.  
+    This is an opportunity to share your work, inspire others, and shape the future of high-performance computing research.
+  </p>
+  <div class="deadline-box">
+    🗓️ Submission Deadline: <strong>March 14, 2026</strong>
   </div>
+  <br /><br />
+  <a href="/Durham-HPC-Days/submissions" class="btn" style="background: #0055aa;">
+    Submit Your Abstract
+  </a>
+</section>
+
+<!-- === HEADER IMAGE === -->
+<div class="header-image"></div>
+
+<!-- === HERO VIDEO SECTION CON PARALLAX === -->
+<div class="hero">
+<video autoplay="" muted="" loop="" playsinline="">
+  <source src="/Durham-HPC-Days/assets/images/video.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+  <div class="hero-content">
+    <h1>Durham HPC Days 2025 Video Recap</h1>
+    <p>Take a look back at Durham HPC Days 2025 in this short recap featuring our keynote speakers</p>
+    <p href="https://youtu.be/wPjtwACmaUg?si=E7VOWWcH5pda8ZSr" class="btn">View Video</p>
+    <p href="https://durham.readthedocs.io/en/latest/hpcdays2025/index.html" class="btn">Visit last year's website</p>
+  </div>
+</div>
+
+<!-- === GALLERY SECTION === -->
+<section id="gallery" class="fade-in">
+  <h2>📸 Gallery</h2>
+  <div class="image-grid">
+<img src="/Durham-HPC-Days/assets/images/Sessions.jpg" alt="Sessions" />
+<img src="/Durham-HPC-Days/assets/images/food-truck.jpg" alt="Food truck" />
+<img src="/Durham-HPC-Days/assets/images/social.png" alt="social" />
+<img src="/Durham-HPC-Days/assets/images/stickers.jpg" alt="stickers" />
+</div>
+</section>
+
+<!-- === PROGRAMME SECTION === -->
+<section id="programme" class="fade-in">
+  <h2>🗓️ Explore the Programme</h2>
+  <p style="max-width: 700px; margin: 0 auto 2rem;">
+    Discover the full schedule of keynotes, technical sessions, and social events for the upcoming conference.  
+    Check the programme to plan your participation and make the most of your experience at Durham HPC Days.
+  </p>
+  <a href="/Durham-HPC-Days/programme" class="btn">View Full Programme</a>
+</section>
+
+<script>
+  // Fade-in animation on scroll
+  document.addEventListener("scroll", function() {
+    document.querySelectorAll('.fade-in').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add('visible');
+      }
+    });
+  });
+</script>
+
+
+    </section>
+  </article>
 </div>
 
       
@@ -372,7 +487,7 @@ git commit <span class="nt">-m</span> <span class="s2">"Add your message here"</
     
 
     
-      <li><a href="/Durham-HPC-Days/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
     
   </ul>
 </div>
@@ -384,14 +499,14 @@ git commit <span class="nt">-m</span> <span class="s2">"Add your message here"</
     </div>
 
     
-  <script src="/Durham-HPC-Days/assets/js/main.min.js"></script>
+  <script src="/assets/js/main.min.js"></script>
 
 
 
 
-<script src="/Durham-HPC-Days/assets/js/lunr/lunr.min.js"></script>
-<script src="/Durham-HPC-Days/assets/js/lunr/lunr-store.js"></script>
-<script src="/Durham-HPC-Days/assets/js/lunr/lunr-en.js"></script>
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
 
 
 
