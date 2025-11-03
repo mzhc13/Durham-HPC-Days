@@ -179,7 +179,6 @@ section t {
   border-radius: 20px;
   max-width: 900px;
   margin: 1rem auto;
-  margin top: 1rem auto;
   text-align: center;
 }
 
