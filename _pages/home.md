@@ -31,7 +31,6 @@ a:hover {
 }
 
 
-
 /* === HERO VIDEO SECTION WITH PARALLAX === */
 .hero {
   position: relative;
