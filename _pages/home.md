@@ -4,7 +4,8 @@ permalink: /
 hidden: true
 header:
   overlay_color: "#5e616c"
-  overlay_image: "{{ '/assets/images/background-hpc-days.png' | relative_url }}"
+  overlay_image: "/Durham-HPC-Days/assets/images/background-hpc-days.png"
+
 ---
 
 <style>
@@ -180,7 +181,7 @@ section p {
 <!-- === HERO VIDEO SECTION CON PARALLAX === -->
 <div class="hero">
 <video autoplay muted loop playsinline>
-  <source src="{{ site.assets_path }}video.mp4" type="video/mp4">
+  <source src="/Durham-HPC-Days/assets/images/video.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
   <div class="hero-content">
