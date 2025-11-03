@@ -97,11 +97,12 @@ a:hover {
 .btn:hover {
   background: #003d80;
   transform: translateY(-3px);
+  font-color: 
 }
 /* === SECTION STYLING === */
 section {
   max-width: 900px;
-  margin: 5rem auto;
+  margin: 2rem auto;
   padding: 0 1.5rem;
   text-align: center;
 }
@@ -109,12 +110,14 @@ section {
 section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  line-height: 0.3;
 }
 
 section p {
   font-size: 1.1rem;
   line-height: 1.7;
   color: #ffff;
+  
 }
 
 section t {
@@ -175,10 +178,9 @@ section t {
 .call-for-submissions {
   background: #002A41;
   color: white;
-  padding: 1rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 20px;
   max-width: 900px;
-  margin: 1rem auto;
   text-align: center;
 }
 
@@ -215,29 +217,28 @@ section t {
     This is an opportunity to share your work, inspire others, and shape the future of high-performance computing research.
   </p>
   <div class="deadline-box">
-    🗓️ Submission Deadline: <strong>March 14, 2026</strong>
+    🗓️ Submission Deadline: <strong>to be announced</strong>
   </div>
   <br><br>
   <a href="/Durham-HPC-Days/submissions" class="btn" style="background: #0055aa;">
-    Submit Your Abstract
-  </a>
+    Submit Your Abstract  
+  </a><br> <br>   
 </section>
 
 
 <!-- === HEADER IMAGE === -->
 <div class="header-image"></div>
 
-<!-- === HERO VIDEO SECTION CON PARALLAX === -->
 <div class="hero">
-<video autoplay muted loop playsinline>
-  <source src="/Durham-HPC-Days/assets/images/video.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+  <video id="hero-video" autoplay muted loop playsinline>
+    <source src="/Durham-HPC-Days/assets/images/video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
   <div class="hero-content">
     <h1>Durham HPC Days 2025 Video Recap</h1>
     <p>Take a look back at Durham HPC Days 2025 in this short recap featuring our keynote speakers</p>
-    <p href="https://youtu.be/wPjtwACmaUg?si=E7VOWWcH5pda8ZSr" class="btn">View Video</p>
-    <p href="https://durham.readthedocs.io/en/latest/hpcdays2025/index.html" class="btn">Visit last year's website</p>
+    <a href="https://youtu.be/wPjtwACmaUg?si=E7VOWWcH5pda8ZSr" class="btn">View Video</a>
+    <a href="https://durham.readthedocs.io/en/latest/hpcdays2025/index.html" class="btn">Visit last year's website</a>
   </div>
 </div>
 
@@ -262,10 +263,10 @@ section t {
 <!-- === PROGRAMME SECTION === -->
 <section id="programme" class="fade-in">
   <h2>🗓️ Explore the Programme</h2>
-  <p style="max-width: 700px; margin: 0 auto 2rem;">
+  <t style="max-width: 700px; margin: 0 auto 2rem;">
     Discover the full schedule of keynotes, technical sessions, and social events for the upcoming conference.  
-    Check the programme to plan your participation and make the most of your experience at Durham HPC Days.
-  </p>
+    Check the programme to plan your participation and make the most of your experience at Durham HPC Days.<br><br>
+  </t>
   <a href="/Durham-HPC-Days/programme" class="btn">View Full Programme</a>
 </section>
 
@@ -281,6 +282,23 @@ section t {
       }
     });
   });
+   // Ajustar video local para que empiece en el segundo 30
+  const video = document.getElementById('hero-video');
+  video.addEventListener('loadedmetadata', () => {
+    video.currentTime = 15; // empieza en el segundo 30
+    video.play();
+  });
+
+  // Fade-in animation on scroll
+  document.addEventListener("scroll", function() {
+    document.querySelectorAll('.fade-in').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add('visible');
+      }
+    });
+  });
+  
 </script>
 
 
