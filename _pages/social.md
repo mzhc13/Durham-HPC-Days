@@ -8,7 +8,7 @@ permalink: /social/
   /* ----- MAIN SECTION WITH FIXED BACKGROUND ----- */
   .social-bg {
     position: relative;
-    background: url("/assets/images/river-durham.jpeg") no-repeat center center fixed;
+    background: url("Durham-HPC-Days/assets/images/river-durham.jpeg") no-repeat center center fixed;
     background-size: cover;
     color: white;
     overflow: hidden;
