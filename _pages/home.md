@@ -222,22 +222,7 @@ section t {
   </t>
 </section>
 
-<div style="position: relative; z-index: 1;">
-<section class="call-for-submissions fade-in">
-  <h2>📢 Call for Submissions</h2>
-  <p>
-    We invite submissions for talks, workshops, and poster sessions at the
-    <strong>Durham HPC Days 2026</strong>.
-    This is an opportunity to share your work, inspire others, and shape the future of high-performance computing research.
-  </p>
-  <div class="deadline-box">
-    🗓️ Submission Deadline: <strong>to be announced</strong>
-  </div>
-  <br><br>
-  <a href="/Durham-HPC-Days/submissions" class="btn" style="background: #0055aa;">
-    Submit Your Abstract
-  </a><br> <br>
-</section>
+
 
 
 <!-- === HERO CON YOUTUBE EMBED === -->
@@ -254,7 +239,22 @@ section t {
   </div>
 </div>
 
-
+<div style="position: relative; z-index: 1;">
+<section class="call-for-submissions fade-in">
+  <h2>📢 Call for Submissions</h2>
+  <p>
+    We invite submissions for talks, workshops, and poster sessions at the
+    <strong>Durham HPC Days 2026</strong>.
+    This is an opportunity to share your work, inspire others, and shape the future of high-performance computing research.
+  </p>
+  <div class="deadline-box">
+    🗓️ Submission Deadline: <strong>to be announced</strong>
+  </div>
+  <br><br>
+  <a href="/Durham-HPC-Days/submissions" class="btn" style="background: #0055aa;">
+    Submit Your Abstract
+  </a><br> <br>
+</section>
 
 
 <!-- === HEADER IMAGE (si la necesitas puedes mantenerlo) === -->
