@@ -54,15 +54,16 @@ a:hover {
   z-index: -1;
 }
 
+/* iframe centrado y escalado para comportarse como object-fit: cover */
 #yt-player iframe {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100vw;           
+  width: 100vw;           /* base al ancho del viewport */
   height: 56.25vw;        /* 16:9 height based on vw */
-  min-height: 100%;       /
-  min-width: 177.78vh;    
+  min-height: 100%;       /* asegurar que cubra verticalmente */
+  min-width: 177.78vh;    /* asegurar coverage en viewports muy altos */
   max-width: none;
   max-height: none;
   pointer-events: none;
@@ -239,7 +240,10 @@ section t {
   </div>
 </div>
 
-<div style="position: relative; z-index: 1;">
+
+
+
+
 <section class="call-for-submissions fade-in">
   <h2>📢 Call for Submissions</h2>
   <p>
@@ -255,7 +259,6 @@ section t {
     Submit Your Abstract
   </a><br> <br>
 </section>
-
 
 <!-- === HEADER IMAGE (si la necesitas puedes mantenerlo) === -->
 <div class="header-image"></div>
